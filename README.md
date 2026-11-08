@@ -6,17 +6,20 @@ Scores passwords and roasts the weaknesses. For fun...
 
 ## Install and use
 
-With Python 3.11+, run from the repository root:
+With Python 3.11+:
 
 ```sh
-python -m pip install .
+python -m pip install dreamteam-password-roaster
 ```
+
+[View the package on PyPI](https://pypi.org/project/dreamteam-password-roaster/).
 
 ```python
 from password_roaster import score_password, roast_password
 
-print(score_password("Password123!"))
+print(score_password("Password123!"))  # 10
 print(roast_password("Password123!"))
+# Your password has a fan club. Unfortunately, they're all hackers.
 ```
 
 - `score_password(password)` returns 0–100 based on length, character variety,
@@ -34,7 +37,7 @@ Run from the repository root:
 python -m pip install pipenv
 pipenv sync --dev
 pipenv run python -m pytest
-pipenv run python examples/roast_demo.py
+pipenv run python -m examples.roast_demo
 pipenv run python -m build
 ```
 
@@ -45,3 +48,7 @@ GitHub Actions builds and tests PRs on Python 3.13 and 3.14.
 ## Team
 
 - [Ben Zaslavsky](https://github.com/benzaslavsky)
+- [TEMP](https://github.com/temp)
+- [TEMP](https://github.com/temp)
+- [TEMP](https://github.com/temp)
+- [TEMP](https://github.com/temp)
