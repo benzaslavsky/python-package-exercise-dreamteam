@@ -2,5 +2,6 @@
 
 from .scoring import score_password
 from .roasting import roast_password
+from .comparison import compare_passwords
 
-__all__ = ["score_password", "roast_password"]
+__all__ = ["score_password", "roast_password", "compare_passwords"]
