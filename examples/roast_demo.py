@@ -1,6 +1,6 @@
-"""Demonstrate both public functions using made-up passwords."""
+"""Demonstrate the public functions using made-up passwords."""
 
-from password_roaster import roast_password, score_password
+from password_roaster import roast_password, score_password, password_feedback
 
 
 def main():
@@ -11,6 +11,8 @@ def main():
     for number, password in enumerate(samples, start=1):
         print(f"Example {number}: {score_password(password)}/100")
         print(roast_password(password))
+        for tip in password_feedback(password):
+            print(f"- {tip}")
         print()
 
 
