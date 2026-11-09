@@ -26,8 +26,25 @@ print(roast_password("Password123!"))
   common passwords, repetition, and sequences. Blank input scores 0.
 - `roast_password(password)` returns a joke about the password's weaknesses.
 
-Both accept strings and raise `TypeError` otherwise. Neither stores or sends
+These functions accept strings and raise `TypeError` otherwise. Neither stores or sends
 passwords. See [the example](examples/roast_demo.py) for more inputs.
+
+## Password face-off
+
+`compare_passwords(first, second)` returns both scores and a winner:
+`first`, `second`, or `tie`. Equal scores are a tie even if the passwords differ.
+Both inputs must be strings. The result does not include either password.
+
+```python
+from password_roaster import compare_passwords
+
+print(compare_passwords("Go7!", "VelvetOtter7!"))
+# {'first_score': 30, 'second_score': 79, 'winner': 'second'}
+```
+
+After installing the local package, run `python -m examples.faceoff_demo` from
+the repository root to see both winners and a tie. These are game scores,
+not a guarantee that the winning password is safe.
 
 ## Development
 
