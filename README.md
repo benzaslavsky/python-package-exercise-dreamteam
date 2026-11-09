@@ -48,7 +48,7 @@ GitHub Actions builds and tests PRs on Python 3.13 and 3.14.
 ## Team
 
 - [Ben Zaslavsky](https://github.com/benzaslavsky)
-- [TEMP](https://github.com/temp)
+- [Jay Yu](https://github.com/jayyu2005)
 - [TEMP](https://github.com/temp)
 - [TEMP](https://github.com/temp)
 - [TEMP](https://github.com/temp)
