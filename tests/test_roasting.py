@@ -29,8 +29,9 @@ def test_invalid_input(password):
 def test_roasts_do_not_expose_password(password, capsys):
     message = roast_password(password)
     assert password not in message
-    assert capsys.readouterr().out == ''
-    assert capsys.readouterr().err == ''
+    captured = capsys.readouterr()
+    assert captured.out == ''
+    assert captured.err == ''
 
 
 def test_common_password_takes_priority_over_short_length():
