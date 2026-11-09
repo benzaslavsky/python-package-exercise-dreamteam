@@ -13,17 +13,23 @@ python -m pip install .
 ```
 
 ```python
-from password_roaster import score_password, roast_password
+from password_roaster import score_password, roast_password, password_feedback
 
 print(score_password("Password123!"))
 print(roast_password("Password123!"))
+print(password_feedback("Go7!"))
+# ['Use at least 12 characters, not counting spaces.']
 ```
 
 - `score_password(password)` returns 0–100 based on length, character variety,
   common passwords, repetition, and sequences. Blank input scores 0.
 - `roast_password(password)` returns a joke about the password's weaknesses.
+- `password_feedback(password)` returns a list of short improvement tips for
+  length, missing character types, common passwords, repetition, and sequences.
+  Blank input returns `['Enter a password.']`. If no rule finds a weakness,
+  it returns `['No obvious weaknesses found.']`; this is not a security guarantee.
 
-Both accept strings and raise `TypeError` otherwise. Neither stores or sends
+All three accept strings and raise `TypeError` otherwise. None stores or sends
 passwords. See [the example](examples/roast_demo.py) for more inputs.
 
 ## Development
